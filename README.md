@@ -21,7 +21,7 @@ The dataset includes both categorical and numerical features. It consists of **2
 **Decision:**
 - Rows with missing values represent less than 10% of all rows.
 - `ActualTOW` (target variable) - The model cannot be trained on samples where the target value is missing. These rows must be excluded.
-- `FlownPassengers`, `BagsCount`, `FlightBagsWeight` - These features are essential for predicting `ActualTOW`
+- `FlownPassengers`, `BagsCount`, `FlightBagsWeight` - These features are essential for predicting `ActualTOW`.
 
 Due to the importance of these observations, I decided to remove rows with missing values to maintain the quality and consistency of the dataset.
 
@@ -52,7 +52,7 @@ Due to the importance of these observations, I decided to remove rows with missi
 
 - Object-type columns were converted to `category` to allow native use with XGBoost's `enable_categorical=True`.
 - The dataset was cleaned and filtered for missing values.
-- Name of `FLownPassengers` was changed to `FlownPassengers`
+- Name of `FLownPassengers` was changed to `FlownPassengers`.
 
 
 ## Modeling
@@ -86,19 +86,19 @@ The best model was saved to `best_xgb_model.pkl` and uses the optimal set of fea
 Optimal features: `DepartureYear`, `DepartureMonth`, `DepartureDay`, `DepartureAirport`, `ArrivalAirport`, `ActualFlightTime`, `ActualTotalFuel`, `FlownPassengers`, `FlightBagsWeight`, `DayOfWeek`, `FuelPerMinute`, `AvgBagWeight`, `IsWeekend`
 
 Optimal hyperparameters:
-`n_estimators`: 470, 
-`max_depth`: 4, 
-`learning_rate`: 0.09694081261961722, 
-`subsample`: 0.9214753371833588, 
-`colsample_bytree`: 0.6674115091571178, 
-`gamma`: 0.8418003889366719, 
-`reg_alpha`: 1.5778679003672926, 
-`reg_lambda`: 2.1406100860160375
+- `n_estimators`: 470, 
+- `max_depth`: 4, 
+- `learning_rate`: 0.09694081261961722, 
+- `subsample`: 0.9214753371833588, 
+- `colsample_bytree`: 0.6674115091571178, 
+- `gamma`: 0.8418003889366719, 
+- `reg_alpha`: 1.5778679003672926, 
+- `reg_lambda`: 2.1406100860160375
 
 
 ## Prediction
 
-The validation dataset (`valid_df`) was prepared by:
+The validation dataset was prepared by:
 
 - Dropping unused columns
 - Applying the same preprocessing as the training set
