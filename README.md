@@ -29,6 +29,7 @@ Due to the importance of these observations, I decided to remove rows with missi
 
 ### Original Features
 
+- `DepartureDate`
 - `DepartureYear`, `DepartureMonth`, `DepartureDay`
 - `FlightNumber`
 - `DepartureAirport`, `ArrivalAirport`, `Route`
@@ -53,7 +54,7 @@ Due to the importance of these observations, I decided to remove rows with missi
 - Object-type columns were converted to `category` to allow native use with XGBoost's `enable_categorical=True`.
 - The dataset was cleaned and filtered for missing values.
 - Name of `FLownPassengers` was changed to `FlownPassengers`.
-
+- Columns `DepartureDate` and `FlightNumber` were removed.
 
 ## Modeling
 
